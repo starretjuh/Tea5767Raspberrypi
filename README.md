@@ -457,3 +457,10 @@ These are normal and harmless. rpitx prints them on every start.
 - rpitx by **F5OEO** — https://github.com/F5OEO/rpitx
 - quick2wire Python API — https://github.com/quick2wire/quick2wire-python-api
 
+## Contribution
+
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have ideas for additional features, bug fixes, or improvements.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code provided.
