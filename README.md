@@ -1,6 +1,6 @@
-# Raspberry Pi FM Radio + Morse Code Transmitter
+# Raspberry Pi FM Radio and Morse Code Transmitter
 
-A Raspberry Pi project that combines an FM radio receiver with a manual Morse code transmitter. Using a TEA5767 FM module and two buttons, you can listen to FM radio and transmit Morse code over FM — hearing your own transmissions through the same speaker.
+A Raspberry Pi project that combines an FM radio receiver with a manual Morse code transmitter. Using a TEA5767 FM module and two buttons, you can listen to FM radio and transmit Morse code over FM and hear your own transmissions through the same speaker.
 
 ---
 
@@ -58,7 +58,7 @@ SDA      →     GPIO2 (Pin 3)  [I²C SDA]
 SCL      →     GPIO3 (Pin 5)  [I²C SCL]
 ```
 
-The TEA5767 audio output (headphone jack) connects to your speaker. The antenna port connects to your FM antenna — do not confuse with the headphone jack.
+The TEA5767 audio output (headphone jack) connects to your speaker. The antenna port connects to your FM antenna, do not confuse with the headphone jack.
 
 ### Buttons → Raspberry Pi (GPIO)
 
@@ -403,8 +403,8 @@ Should show `60` at address 0x60. If not: check VCC/GND/SDA/SCL wiring, confirm 
 ### Morse tone sounds distorted or cuts out
 
 - `tone_loop.wav` missing or not in the same directory as the scripts
-- rpitx not installed or not in PATH — test with `which rpitx`
-- The Pi needs `sudo` for rpitx — always run the controller with `sudo python3`
+- rpitx not installed or not in PATH, test with `which rpitx`
+- The Pi needs `sudo` for rpitx, always run the controller with `sudo python3`
 
 ### Radio button doesn't respond
 
@@ -429,15 +429,6 @@ Should print `1` normally and `0` when button is pressed.
 
 This is normal if there is only one strong station in your area. The scanner stops at the first signal strong enough to lock on. In an area with multiple strong stations (e.g. in a car with a proper antenna) the scan will find different stations each time.
 
-### `ImportError: cannot import name 'tea5767' from partially initialized module`
-
-A circular import — `tea5767stationscanner.py` accidentally contains the line:
-
-```python
-from tea5767stationscanner import tea5767
-```
-
-Delete that line. It should not be in the scanner file.
 
 ### `rpitx` warning messages on startup
 
