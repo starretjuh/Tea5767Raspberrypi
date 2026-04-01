@@ -133,20 +133,24 @@ sudo i2cdetect -y 1
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/rpi-radio-morse.git
-cd rpi-radio-morse
+### Option A: Using setup.py (Recommended)
+1. Clone the repository:
+   ```
+   git clone https://github.com/starretjuh/Tea5767Raspberrypi.git
+   cd Tea5767Raspberrypi
+   ```
+2. Install the package using setup.py:
+   ```
+   python setup.py install
+   ```
 
-# Install Python dependencies
-pip3 install RPi.GPIO smbus quick2wire-api websocket-client
-
-# Install rpitx (if not already installed)
-git clone https://github.com/F5OEO/rpitx
-cd rpitx && ./install.sh && cd ..
-
-# Generate the tone file (or use the included tone_loop.wav)
-# The included tone_loop.wav is a 1000Hz sine wave, 30 seconds long
+### Option B: Manual Installation
+1. Clone the repository:
+   ```
+   git clone https://github.com/starretjuh/Tea5767Raspberrypi.git
+   cd Tea5767Raspberrypi
+   ```
+2. Follow the manual installation steps provided in the documentation.
 ```
 
 ### File placement
